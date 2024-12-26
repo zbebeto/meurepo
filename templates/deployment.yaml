@@ -15,7 +15,7 @@ spec:
         app: {{ .Release.Name }}-ubuntu
     spec:
       nodeSelector:
-        role-reverse-proxy-a: true
+        role-reverse-proxy-a: "true"
       containers:
         - name: ubuntu
           image: ubuntu:latest
