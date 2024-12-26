@@ -3,12 +3,12 @@ entries:
   ubuntu-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-12-26T15:29:55.545524005-03:00"
+    created: "2024-12-26T15:31:55.527084869-03:00"
     description: A Helm chart for Kubernetes
-    digest: aecfbcb7545137ae082e9c14e300b1c4af2fd08f096bf38cfb40d8c62d0dd35d
+    digest: 8251d1a7d63c163bd5a8bd30636ee1c06167860742c4d2bc2cc628a4e1c85a22
     name: ubuntu-chart
     type: application
     urls:
     - https://zbebeto.github.io/meurepo/ubuntu-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-26T15:29:55.545065121-03:00"
+generated: "2024-12-26T15:31:55.526620139-03:00"
