@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  heapsize: "{{ .Values.config.heapsize }}"
+  memorysize: "{{ .Values.config.memorysize }}"
+  environment: "{{ .Values.config.environment }}"

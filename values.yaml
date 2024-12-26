@@ -1,0 +1,4 @@
+config:
+  heapsize: "512"
+  memorysize: "1024"
+  environment: "production"

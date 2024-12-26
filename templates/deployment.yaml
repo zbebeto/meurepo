@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-ubuntu
+  labels:
+    app: {{ .Release.Name }}-ubuntu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-ubuntu
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-ubuntu
+    spec:
+      containers:
+        - name: ubuntu
+          image: ubuntu:latest
+          command: ["/bin/sh", "-c", "--"]
+          args: ["while true; do sleep 30; done;"]
+          env:
+            - name: HEAPSIZE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: heapsize
+            - name: MEMORYSIZE
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: memorysize
+            - name: ENVIRONMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: {{ .Release.Name }}-config
+                  key: environment
